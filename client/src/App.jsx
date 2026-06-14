@@ -112,7 +112,7 @@ export default function App() {
       <header className="header">
         <div className="container nav-container">
           <a href="#" className="logo">
-            <Activity className="logo-icon text-primary" size={24} />
+            <img src="/logo.jpg" alt="NFM Medcare Logo" style={{ width: '32px', height: '32px', borderRadius: '6px', objectFit: 'cover' }} />
             <span>NFM Medcare</span>
           </a>
           <button className="btn btn-primary" onClick={handleInstallRedirect}>
@@ -124,11 +124,9 @@ export default function App() {
       {/* Hero Section */}
       <section className="hero">
         <div className="container text-center">
-          <h1 className="hero-title">Your complete online pharmacy, managed on-the-go.</h1>
+          <h1 className="hero-title">NFM Medcare</h1>
           <p className="hero-desc">
-            NFM Medcare connects you with prescription refills, featured healthcare products, 
-            skincare essentials, and haircare treatments. Save delivery addresses, track orders 
-            live, and manage profiles from your home dashboard.
+            Your complete online pharmacy, managed on-the-go.
           </p>
 
           <div className="hero-actions">
@@ -348,65 +346,9 @@ export default function App() {
         </div>
       </section>
 
-      {/* Features checklist Grid */}
-      <section className="features-grid-section">
-        <div className="container">
-          <div className="text-center">
-            <div className="section-meta">Features</div>
-            <h2 className="section-title">Powerful features</h2>
-            <p className="section-desc">All the clinical utilities you need to orchestrate care schedules, reports, and vital tracking.</p>
-          </div>
-
-          <div className="features-grid">
-            {features.map((feat, index) => (
-              <div className="feature-card" key={index}>
-                <div className="feature-icon-box">{feat.icon}</div>
-                <h3>{feat.title}</h3>
-                <p>{feat.desc}</p>
-                <a href="#features" className="feature-link">Learn more &gt;</a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Accordions Section */}
-      <section className="faq">
-        <div className="container">
-          <div className="text-center">
-            <div className="section-meta">FAQ</div>
-            <h2 className="section-title">Frequently Asked Questions</h2>
-            <p className="section-desc">Have questions about NFM Medcare? Find answers to commonly asked questions below.</p>
-          </div>
-
-          <div className="faq-list">
-            {faqs.map((faq, index) => (
-              <div className={`faq-item ${activeFaq === index ? 'active' : ''}`} key={index}>
-                <button className="faq-question" onClick={() => toggleFaq(index)}>
-                  <span>{faq.q}</span>
-                  <ChevronDown size={18} />
-                </button>
-                <div className="faq-answer">
-                  <p>{faq.a}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="cta-section">
-        <div className="container">
-          <div className="cta-box">
-            <h2>Take control of your healthcare orders today.</h2>
-            <p>Start shopping medicines, skincare, and bodycare on-the-go with NFM Medcare.</p>
-            <button className="btn btn-primary btn-large" onClick={handleInstallRedirect}>
-              Install NFM Medcare
-            </button>
-          </div>
-        </div>
-      </section>
+      <footer className="footer" style={{ padding: '2rem 0', textAlign: 'center', borderTop: '1px solid hsl(var(--border-color))', color: 'hsl(var(--muted-foreground))', fontSize: '0.875rem' }}>
+        <p>© 2026 NFM Medcare. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
