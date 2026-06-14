@@ -1,0 +1,16 @@
+{
+  "name": "cal-ai-mern-landing",
+  "version": "1.0.0",
+  "description": "MERN Stack Landing page for Cal AI without database",
+  "main": "server/server.js",
+  "scripts": {
+    "setup": "npm install && cd server && npm install && cd ../client && npm install",
+    "server": "node server/server.js",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm --prefix client run build"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>NFM Medcare | Secure Digital Healthcare Portal</title>
+    <meta name="description" content="NFM Medcare connects you with doctors, manages your prescriptions, tracks your vitals, and secures your medical reports. Install instantly to access medical care on-the-go." />
+    <meta name="keywords" content="NFM, NFM Medcare, Health Tracker, Doctor Appointments, Telemedicine, Vitals log" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#6366f1">
+    <script type="module" crossorigin src="/assets/index-CLcuRKP8.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-IH2CQ76h.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <!-- Register PWA Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('Service Worker registered successfully!', reg.scope))
+            .catch(err => console.error('Service Worker registration failed:', err));
+        });
+      }
+    </script>
+  </body>
+</html>
