@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-  Heart, Activity, Calendar, Pill, FileText, ShieldAlert, 
+  Heart, Activity, Pill, FileText, ShieldAlert, 
   Video, Sparkles, Check, ChevronRight, User, ArrowRight,
   TrendingUp, Plus, Search, MapPin, Download, AlertTriangle,
   ShoppingCart, Bell, HelpCircle, Briefcase, Settings, Map
@@ -242,7 +242,7 @@ export default function PhoneMockup({ screenId }) {
 
               <div className="phone-category-banner">
                 <img 
-                  src="https://images.unsplash.com/photo-1608248597481-496100c8c836?w=300&auto=format&fit=crop&q=60" 
+                  src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=300&auto=format&fit=crop&q=60" 
                   alt="Skincare"
                   className="phone-category-banner-img"
                 />

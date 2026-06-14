@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 // Serve static assets from the client build directory
-app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use(express.static(path.join(__dirname, '../dist')));
 
 // API Endpoint to stream simulated installers
 app.get('/api/download/:platform', (req, res) => {
@@ -67,7 +67,7 @@ app.get('/api/download/:platform', (req, res) => {
 
 // Fallback to React app for all other routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 app.listen(PORT, () => {
